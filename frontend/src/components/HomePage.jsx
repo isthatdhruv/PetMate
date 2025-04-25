@@ -40,7 +40,7 @@ const HomePage = () => {
           <p className="text-muted">
             Connecting animals in need with people who care and local NGOs
           </p>
-          <button className="btn btn-danger">Report an Animal in Need</button>
+          <button className="btn btn-danger" onClick={() => navigate('/report')}>Report an Animal in Need</button>
           <div>
             <img src="../mainpic10.jpg" alt="" />
           </div>
@@ -54,7 +54,7 @@ const HomePage = () => {
               <div className="fs-1 mb-2">📱</div>
               <h5>Report an Animal</h5>
               <p>Submit details and location of the injured animal</p>
-              <button className="btn btn-danger">Report Now</button>
+              <button className="btn btn-danger" onClick={() => navigate('/report')} >Report Now</button>
             </div>
             <div className="col-md-4">
               <div className="fs-1 mb-2">🏠</div>
