@@ -1,7 +1,15 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Ngo from "../assets/Ngo.jsx"; // Adjust the path as necessary
+
+
 
 const HomePage = () => {
+  const ngos = [
+    { id: 1, name: "Animal Aid Unlimited", location: "Udaipur, India" },
+    { id: 2, name: "Blue Cross of India", location: "Chennai, India" },
+    { id: 3, name: "Wildlife SOS", location: "Agra, India" }
+  ];
   return (
     <div className="maincontainer">
       <div>
@@ -33,35 +41,34 @@ const HomePage = () => {
             </div>
             <div className="col-md-4">
               <div className="fs-1 mb-2">💚</div>
-              <h5>Get Help & Support</h5>
-              <p>NGOs provide rescue, medical care, and recovery</p>
+              <h5>Help Animals</h5>
+              <p>Provide support and care for injured animals</p>
             </div>
           </div>
         </div>
-
         {/* Featured NGOs */}
+        <div className="container text-center py-5">
         <div className="container text-center py-5">
           <h3 className="fw-bold mb-4">Featured NGOs</h3>
           <div className="row">
-            {["Hope for Paws", "Animal Aid Unlimited", "Paws Foundation"].map(
-              (ngo, index) => (
-                <div className="col-md-4 mb-4" key={index}>
-                  <div className="card p-3">
-                    <div className="card-body">
-                      <h5 className="card-title">{ngo}</h5>
-                      <p className="card-text">Location</p>
-                      <button className="btn btn-success">View Details</button>
-                    </div>
-                  </div>
-                </div>
-              )
-            )}
+            {ngos.map((ngo) => (
+              <div className="col-md-4" key={ngo.id}>
+                <Ngo name={ngo.name} location={ngo.location} />
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Support Section */}
+        
         <div className="container text-center py-5 bg-light">
-          <h3 className="fw-bold">Support Our Mission</h3>
+        {/* Support Section */}
+          <p>
+            Your donations help provide medical care, food, and shelter for
+            animals in distress.</p>
+          </div>
+        </div>
+        <div className="container text-center py-5 bg-light">
+          {/* Support Section */}
           <p>
             Your donations help provide medical care, food, and shelter for
             animals in distress.
@@ -72,4 +79,6 @@ const HomePage = () => {
     </div>
   );
 };
+
+
 export default HomePage;
