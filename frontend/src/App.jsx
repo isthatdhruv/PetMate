@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar.jsx"; // Import NavBar
 import ReportAnimalForm from "./components/ReportAnimalForm.jsx";
 import NGOprofile from "./components/NGOprofile.jsx";
 import DonationPage from "./components/Donationpage.jsx";
+import LoginPreview from "./components/Signup.jsx";
 const App = () => {
   return (
     <Router>
@@ -17,7 +18,9 @@ const App = () => {
           <Route path="/ngo" element={<NGOprofile />} />
           <Route path="/report" element={<ReportAnimalForm />} />
           <Route path="/donate" element={<DonationPage/>}/>
+          
         </Routes>
+        <LoginPreview/>
       </div>
     </Router>
   );
